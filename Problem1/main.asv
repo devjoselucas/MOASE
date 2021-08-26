@@ -17,19 +17,18 @@ clc;
 
 % Cálculo de investimento de cada instituição
 
-[F]   = calcF(M);
+[F]   = calcF(M)
 
 % Cálculo da função objetivo
 
-[O] = objetivo(F);
+[O] = objetivo(F)
 
 % Para que a função objetivo retorne a mesma ordem de grandeza 
 % da função F, calcula-se a raiz de O
 
-[E] = min_error(F,O);
+[E] = min_error(F,O)
 
 % A otimização ocorre com a obtenção do mínimo valor do vetor Erro = E
-% Desta forma, a função retorna qual instituição e qual melhor conjunto de
-% investimento
+% Desta forma, a função retorna o 
 
-melhor_inv(E,F);
+m = min(E)
