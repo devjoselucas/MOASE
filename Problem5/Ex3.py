@@ -44,8 +44,8 @@ def print_selected_items(dp, weights, capacity):
     return weights
 
 # Driver
-profits = [540, 79, 17, 187, 245, 140]
-weights = [5, 2, 1, 4, 5, 3]
+profits = [79, 17, 187, 245, 140, 500]
+weights = [2, 1, 4, 5, 3, 6]
 capacity = 10
 maximumProfit = solve_knapsack_unbounded_bottomup(profits, weights,
 capacity)
