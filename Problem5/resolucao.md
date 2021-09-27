@@ -65,6 +65,8 @@ Quantidades por produto:
  0
 ~~~
 
+----
+
 <br>
 2. Aplicar um algoritmo genético para resolver o problema da mochila. Empregar o exemplo dado
 aqui apenas para validar o código. Isto é, o código deve ser geral, para quaisquer capacidade da
@@ -224,6 +226,8 @@ Quantidade otimizada de itens:
 [array([0, 0, 0, 2, 0])]
 ~~~
 
+----
+
 <br>
 3. Experimente o código da Figura 3, mediante alguns estudos de caso. Para isso faça o seguinte:
 <br>
@@ -362,27 +366,76 @@ e) Avalie a consistência do código a partir dos resultados encontrados.
 
 <br>
 O algoritmo apresenta uma ambiguidade de resoluções quando se insere artigos com mesmo peso.
-
-<br>
-<br>
 <br>
 
+----
 
 <br>
+4. Como os artigos selecionados são identificados por seus pesos, como funcionará o código da
+Tabela 3, caso haja artigos distintos (de lucros distintos) com mesmo peso? Para ter resposta a
+essa questão faça os seguintes experimentos:
 <br>
+
 <br>
+a) Inclua no fim da lista de artigos um outro de peso 5 e valor 450.
+<br>
+
+<br>
+Realizando esta alteração é possível obter um novo valor máximo para o problema:
+
+~~~python
+profits  = [79, 17, 187, 245, 140, 540]
+weights  = [2, 1, 4, 5, 3, 5]
+capacity = 10
+~~~
+~~~
+Selected weights are: [5, 5]
+Maximum Profit is   : 1080
+~~~
 
 
 <br>
+b) Reposicione o artigo F no início da lista. 
+<br>
+
+<br>
+Feito isso:
+
+~~~python
+profits  = [540, 79, 17, 187, 245, 140]
+weights  = [5, 2, 1, 4, 5, 3]
+capacity = 10
+~~~
+~~~
+Selected weights are: [5, 5]
+Maximum Profit is   : 490
+~~~
+
+<br>
+c) Procure explicar eventuais diferenças nos resultados dos itens acima.
+<br>
+
+<br>
+Neste caso, o algoritmo não compara o valor máximo obtido com o próximo para se chegar a um resultado global. Apenas sobrescreve o resultado, obtendo-se, na saída, o último valor máximo obtido.
+<br>
+
+<br>
+5. A partir da experiência com a programação dinâmica, qual sua avaliação dos algoritmos
+genéticos para solução do problema irrestrito da mochila? O que pode ser aproveitado do que
+foi feito na solução dos exercícios de 2 a 4 para melhorar o desempenho do algoritmo genético?
+<br>
+
+<br>
+Devido à aleatoriedade da obtenção das populações no algoritmo genético, não necessariamente será obtido o valor global de otimização do problema da mochila. Para este problema o algoritmo genético não é tão eficiente com relação à precisão no valor global otimizado.
 <br>
 <br>
 
+----
 
-<br>
-<br>
-<br>
+<center>
+<h6>
+jose.holanda@ee.ufcg.edu.br
+</h6>
+</center>
 
-
-<br>
-<br>
-<br>
+----
