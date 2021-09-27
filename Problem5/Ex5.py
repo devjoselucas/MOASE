@@ -107,6 +107,4 @@ def optimize(weight, value, population, pop_size, num_generations, threshold):
 
 
 parameters, fitness_history = optimize(weight, value, initial_population, pop_size, num_generations, knapsack_threshold)
-print('Quantidade otimizada de itens: \n{}'.format(parameters))
-
-     
+print('Quantidade otimizada de itens: \n{}'.format(parameters))  
